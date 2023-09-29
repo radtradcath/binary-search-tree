@@ -23,6 +23,35 @@ class Tree {
 
     return node;
   }
+
+  insert(value, node = this.root) {
+    console.log(node);
+    if (value > node.value) {
+      if (node.right === null) {
+        let nodeInsert = new aNode();
+        nodeInsert.value = value;
+        node.right = nodeInsert;
+        return;
+      }
+
+      this.insert(value, node.right);
+    }
+
+    if (value < node.value) {
+      if (node.left === null) {
+        let nodeInsert = new aNode();
+        nodeInsert.value = value;
+        node.left = nodeInsert;
+        return;
+      }
+
+      this.insert(value, node.left);
+    }
+  }
+
+  delete(value, node = this.root) {
+    
+  }
 }
 
 const sort = (arr) => {
@@ -51,7 +80,9 @@ const prettyPrint = (node, prefix = "", isLeft = true) => {
   }
 };
 
-let myTree = new Tree([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]);
-console.log(myTree)
+let myTree = new Tree([1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324]);
+console.log(myTree);
+myTree.insert(16);
+myTree.insert(2)
+console.log(myTree.root);
 prettyPrint(myTree.root);
-
