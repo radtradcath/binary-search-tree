@@ -2,7 +2,8 @@
 
 A project to pratice methods for Binary Search Tree, using linked lists.
 
-// let myTree = new Tree([
+```
+let myTree = new Tree([
   1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 15, 21, 33, 55, 69, 88,
 ]);
 prettyPrint(myTree.root); // Print Balanced Tree
@@ -28,3 +29,4 @@ console.log(`Level Order: ${myTree.levelOrder()}`); // Level Order: 55,8,110,4,2
 console.log(`Preorder: ${myTree.preorder()}`); // Preorder: 55,8,4,3,1,7,5,21,15,9,33,23,110,88,69,67,105,100,130,123,121,135
 console.log(`Inorder: ${myTree.inorder()}`); // Inorder: 1,3,4,5,7,8,9,15,21,23,33,55,67,69,88,100,105,110,121,123,130,135
 console.log(`Postorder: ${myTree.postorder()}`); // Postorder: 1,3,5,7,4,9,15,23,33,21,8,67,69,100,105,88,121,123,135,130,110,55
+```
